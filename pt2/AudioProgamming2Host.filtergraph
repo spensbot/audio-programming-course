@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FILTERGRAPH>
+  <FILTER uid="2" x="0.17375" y="0.075">
+    <PLUGIN name="MIDI Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="a9e4f9eb"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
+            numOutputs="0" isShell="0" uid="a9e4f9eb"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="disabled"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="disabled"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="5" x="0.29" y="0.3403846153846154" uiLastX_Normal="699"
+          uiLastY_Normal="71" uiopen_Normal="0">
+    <PLUGIN name="Helm" format="AudioUnit" category="Synth" manufacturer="Matt Tytel"
+            version="0.9.0" file="AudioUnit:Synths/aumu,Helm,Tyte" uniqueId="7d69757d"
+            isInstrument="1" fileTime="0" infoUpdateTime="17cf336c6f6" numInputs="0"
+            numOutputs="1" isShell="0" uid="7d69757d"/>
+    <STATE>5417.hAGaoMGcv.C1AHv.DTfAGfPBJr.DQHwDTvUag4VclE1XzUmbkIGUjEFcgwUYrUVak4Fcs3VXsU1UyUmXzkGbkckckI2bo8laTQWdvU1WP7fZ0MVYPwVcmklaSQWXzUFUtEVakIAU4QWYOEAAjA..............KB....COfmUH....w3Cv......fL8jYlZB...LyO.B......z7SFYpI...PM+........XC.........2..........N.........jiOpp5p..fAe7STz0E..X.H9X61tA..FDB.......fAh7iA1MO..XvH+.......FPxOyLyL..fAk7iDIUB..XfI........FbhOpp5p..fAn7STz0E..XfO+.......F7yO.B....fA.A.......XPP........FHD.......fAC4Cv.....X.Q+.......FTjO.C....fAF8C......XvQ........FzkO.C....fAdA.......XvW........F.F.......fAgA.......XfX+.......FL1O......fAj8C......XPY........FXF.......fA74Cv.....XPe9.L.....F32O......fA+8Cf.....X.f+zQhYC..FD3O.B....fAB5ipptJ..Xvf+rfnoC..FPH.......fAE9Cf.....Xvl+zQhYC..Fv4O.B....fAc5ipptJ..Xfm+HB55B..F7I.......fAfB.......XPn9bVNNC..FH5O......fAi9C......X.o8vLyMC..FnK.......fA69CC2vH..X.u9vLyMC..Fz6O......fA99C......Xvu8vLyMC..F.L.......fAA+CC2vH..Xfv9vLyMC..FL7O......fAY+C......Xf1+.......FrcOpp5p..fAb+Cf.....XP2+zQhYC..F3sOpp5p..fAe+iHnqK..X.3........FDdOFGCi..fAh6Cf.....X.9........Fj+O......fA5+C......Xv9+.......Fv+O......fA8C.......Xf++HB55B..F7+O......vA.7C......bP.+.......GbwO......vAX7C......bPF+.......GnwO......vAa7C......b.G+.......GzwO......vAd7C......bvG+.......G.xO......Puw+C......zq7+.......8N+O......Puz+C......za8+.......8Z+O......Pu2+C......zK9+.......8l+O......Pu5+C......3KD+.......9FwO......fuR7C......36D+.......9RwO......fuU7C......3qE+.......9dwO......fuX7C......3aF+.H.....99hOpp5p..fuv7iHnqK..3aL........9JiOa21s..fuy........3KM+niKLB..9ViOpp5p..fu17yBhlN..36M9vDyMC..9hiOpp5p..fuN4CyL2L..36S........9BE.......fuQA.......3qT9vDyMC..9NE.......fuTA.......3aU+.......9ZkO+u++QyPCQISzN7PTvX0S0QGb0QmDHUFasAA.RDVcsU2SQ7.460fBf.hHrk1Xk41bkIhNfHBTgQ2XnABJikBHhkGHt.BHTgVZyABbgQ2XnARZyABaoMVYtMWYjARctQVYxARXfLjbkEFcoYWYfLzas01atMGHAQGcxklX0QWZu4FHz3BLfjjazUlbtEFco8lagwFHLk1Xk41bk4BHfj0a0Axbn8VcrQFHnElckAhbkMVYoYWYjARXfL1avkGHuYFHzgVYfvVZiUlayUFHgw1atcFH2kFcnABcnk1bfb2axslKf.RRlAhauQGKfLWYkABOnQGcvoyKuLlbkEFcoYWYi8Vas8lay4xaxc1Krk1Xk41bkM2Khk2Kz3BLu3iKhvRCJ.BHhLWdtQGZeYWYxMWZu4lH5.hHv3RNt.iHrzfBf.hHvEFcig1WtEVakIhNfHhHrzfBf.hHl8FajUlbe4VXsUlH5.hHhvRCJ.BHhDVczg1axIhNfHhHrzfBf.hHyUFczklamMmH5.xdMn.Hf.BHhDVav8UXzQWXislH5.BLtDCL4TCM0.CLv.CLv.CLv.CLyPCNrzfBf.BHfHRXsA2WjU1XgkmH5.RLtTCKMn.Hf.BHhDVav8kbkwVYgMWYhnCHv3hL4jSN4jSN4jSN4jSN4jSN3fSNrzfBf.BHfHRXsA2WyU2bzEVZtIhNfDCKMn.Hf.BHhDlbv8kYxUVb0UlaikmH5.hLrzfBf.BHfHRXxA2WmEFckIhNf.iK0vRCJ.BHf.hHgIGbe81XzElckMmH5.RLrzfBf.BHfHRXxA2Wu4lH5.BLrzfBf.BHfHRXxA2WvEFczUlbtIhNf.CKMn.Hf.BHhDlbv80b441XhnCHwvRCJ.BHf.hHgIGbeQWYsA2ahnCH4vRCJ.BHf.hHhUVXzM2WvUlbe0VZtUGckIhNfHCKMn.Hf.BHhLlbuM2be01ajUGagQWZu4lH5.BLrzfBf.BHfHxX0Q2alYlH5.BNvvRCJ.BHf.hHjUFagk2WjIWdecWYzIhNf.iK0vRCJ.BHf.hHjUFagk2WlUVYjIVXislH5.BLtPCLv.CLv.CLv.CLv.CLv.iLxHCKMn.Hf.BHhPVYrEVdeYlbkEWck41X4IhNfHCKMn.Hf.BHhPVYrEVde8lahnCHvvRCJ.BHf.hHjUFagk2WykmaiIhNfDCKMn.Hf.BHhPVYrEVdeQWYsA2ahnCH4vRCJ.BHf.hHjk1bz8lbzk1at8EYxklckIhNf.CKMn.Hf.BHhPVZyQ2axQWZu41WskFdhnCHwvRCJ.BHf.hHjk1bz8lbzk1at80atIhNf.CKMn.Hf.BHhPVZyQ2axQWZu41WzkGbkIhNf.CKMn.Hf.BHhXVZr8UXzQWXislH5.BLrzfBf.BHfHhYow1WjU1XgkmH5.RLtTCKMn.Hf.BHhXVZr8UYtY2WjUFbzglH5.BLrzfBf.BHfHhYow1WxUFakE1bkIhNfDiK0vRCJ.BHf.hHlkFaeMWcyQWXo4lH5.BLtTCKMn.Hf.BHhXVZrQWYx8kXrUlajIhNf.CKMn.Hf.BHhXVZrQWYx8EYxklckIhNf.CKMn.Hf.BHhXVZrQWYx80atIhNf.CKMn.Hf.BHhXVZrQWYx80bnUFalIhNf.CKMn.Hf.BHhXVZrQWYx80bzkGakIhNf.CKMn.Hf.BHhX1ax0VXtQ2Wu4lH5.BLrzfBf.BHfHhYuIWag4FcegmH5.BLtTCKMn.Hf.BHhX1ax0VXtQ2W4IhNf.iK0vRCJ.BHf.hHqUVdzIWXislH5.BLrzfBf.BHfHBakcVXz8lH5.BLrzfBf.BHfHRauQ1WgQGcgM1ZhnCHvvRCJ.BHf.hHs8FYeQVYiEVdhnCHw3RMrzfBf.BHfHRauQ1WxUFakE1bkIhNfDiK0vRCJ.BHf.hHs8FYeMWcyQWXo4lH5.BLtTCKMn.Hf.BHhz1at81WrY1aeEyWg0FbrkFc0QVYhnCHwvRCJ.BHf.hHs8lau8Eal81Ww7kYxUVb0UlaikmH5.RLrzfBf.BHfHRau41aewlYu8ULeIWYzIWZmcVYxIhNfHCKMn.Hf.BHhz1at81WrY1aeEyWykmaiIhNfDCKMn.Hf.BHhz1at81WrY1aeEyWzUVav8lH5.hMrzfBf.BHfHRau41aewlYu8ULecWX1UlYuIWahnCHvvRCJ.BHf.hHs8lau8Eal81Wx7UXsAGaoQWcjUlH5.RLrzfBf.BHfHRau41aewlYu8kLeYlbkEWck41X4IhNfDCKMn.Hf.BHhz1at81WrY1aeIyWxUFcxk1YmUlbhnCHxvRCJ.BHf.hHs8lau8Eal81Wx70b441XhnCHwvRCJ.BHf.hHs8lau8Eal81Wx7Eck0FbuIhNfbCKMn.Hf.BHhz1at81WrY1aeIyW2ElckY1ax0lH5.BLrzfBf.BHfHhauk1bk8kcuwVcsUlH5.BLrzfBf.BHfHha001WyQWYvMmH5.BNrzfBf.BHfHxayM1Ww7EcxElayA2ayUlH5.BLrzfBf.BHfHxayM1Ww7Ec04VYhnCHvvRCJ.BHf.hHuM2XeEyW04VZy8laeQVYzUmakIhNfDCLrzfBf.BHfHxayM1Ww7Uctk1bu41W18VZiU1bhnCHwvRCJ.BHf.hHuM2XeEyW18Fa00VYhnCHv3RMzbyMxHSM0bCM4jSN4jSN3PiMzvRCJ.BHf.hHuM2XeEyW2ElckY1ax0lH5.BLrzfBf.BHfHxayM1Wx7EcxElayA2ayUlH5.BLrzfBf.BHfHxayM1Wx7Ec04VYhnCHvvRCJ.BHf.hHuM2XeIyW04VZy8laeQVYzUmakIhNfDCLrzfBf.BHfHxayM1Wx7Uctk1bu41W18VZiU1bhnCHwvRCJ.BHf.hHuM2XeIyW18Fa00VYhnCHv3RMzbyMxHSM0bCM4jSN4jSN3PiMzvRCJ.BHf.hHuM2XeIyW2ElckY1ax0lH5.BLrzfBf.BHfHxayM1WlUVYjIVXis1Wg01a04FchnCHvvRCJ.BHf.hHuM2XeYVYkQlXgM1ZeQmbg41bv81bkIhNf.CKMn.Hf.BHh71bi8kYkUFYhE1Xq8Ec04VYhnCHvvRCJ.BHf.hHvkFcig1WhUlaj8kbg41YkIhNfHCKMn.Hf.BHh.2ark2WrY1aeEVavwVZzUGYkIhNfDCKMn.Hf.BHh.2ark2WrY1aeYlbkEWck41X4IhNfDCKMn.Hf.BHh.2ark2WrY1aeMWdtMlH5.RLrzfBf.BHfHBbuwVdewlYu8Eck0FbuIhNfbCKMn.Hf.BHh.2ark2WrY1aecWX1UlYuIWahnCHvvRCJ.BHf.hHv8Fa4AGZu4VdhnCHzvRCJ.BHf.hHv8lbzEVak4FcuIhNfzxMrzfBf.BHfHBbuIGcg0VYtQ2aeQWdvUlH5.BLrzfBf.BHfHhbkM2atElaiUlH5.BLtTCKMn.Hf.BHhHWY1Ulbh8EYg0Fbo41YhnCHv3RMrzfBf.BHfHhbkYWYxI1WjIWdecWYzIhNf.iK0vRCJ.BHf.hHxUlckImXeYVYkQlXgM1ZhnCHv3RNv.CLv.CLv.CLv.CLv.CLxHiLrzfBf.BHfHhbkYWYxI1Wu4lH5.BLrzfBf.BHfHxbzUFbeYlbkEWck41X4IhNfHCKMn.Hf.BHhLGckA2WyUVbeACLhnCHvvRCJ.BHf.hHyQWYv80bkE2WvDiH5.BLrzfBf.BHfHxbzUFbeMWYw8ELxHhNf.CKMn.Hf.BHhLGckA2WyUVbeAyLhnCHvvRCJ.BHf.hHyQWYv80bkE2WvPiH5.BLrzfBf.BHfHxbzUFbeMWYw8EL0HhNf.CKMn.Hf.BHhLGckA2WyUVbeAiMhnCHvvRCJ.BHf.hHyQWYv80bkE2WvbiH5.BLrzfBf.BHfHxbzUFbeMWYw8EL3HhNf.CKMn.Hf.BHhLGckA2WyUVbeASNhnCHvvRCJ.BHf.hHyQWYv80bkE2Ww.iH5.BLrzfBf.BHfHxbzUFbeMWYw8ULwHhNf.CKMn.Hf.BHhLGckA2WyUVbeEiLhnCHvvRCJ.BHf.hHyQWYv80bkE2WwLiH5.BLrzfBf.BHfHxbzUFbeMWYw8ULzHhNf.CKMn.Hf.BHhLGckA2WyUVbeESMhnCHvvRCJ.BHf.hHyQWYv80bkE2WwXiH5.BLrzfBf.BHfHxbzUFbeMWYw8UL2HhNf.CKMn.Hf.BHhLGckA2WyUVbeECNhnCHvvRCJ.BHf.hHyQWYv80bkE2WwjiH5.BLrzfBf.BHfHxbzUFbeMWYw8kLvHhNf.CKMn.Hf.BHhLGckA2WyUVbeISLhnCHvvRCJ.BHf.hHyQWYv80bkE2WxHiH5.BLrzfBf.BHfHxbzUFbeMWYw8kLyHhNf.CKMn.Hf.BHhLGckA2WyUVbeICMhnCHvvRCJ.BHf.hHyQWYv80bkE2WxTiH5.BLrzfBf.BHfHxbzUFbeMWYw8kL1HhNf.CKMn.Hf.BHhLGckA2WyUVbeIyMhnCHvvRCJ.BHf.hHyQWYv80bkE2WxfiH5.BLrzfBf.BHfHxbzUFbeMWYw8kL4HhNf.CKMn.Hf.BHhLGckA2WyUVbeMCLhnCHvvRCJ.BHf.hHyQWYv80bkE2WyDiH5.BLrzfBf.BHfHxbzUFbeMWYwUWYtMVYx8kbkQmboc1YkImH5.hLrzfBf.BHfHxbzUFbeMWYwUWYtMVYx80b441XhnCHwvRCJ.BHf.hHyQWYv80bkEWck41XkI2WzUVav8lH5.xMrzfBf.BHfHxbzUFbeMWau8FcnklamIhNf.CKMn.Hf.BHhLGc0QGckI2WlIWYwUWYtMVdhnCHyvRCJ.BHf.hHyQWczQWYx80atIhNf.CKMn.Hf.BHhLGc0QGckI2WxU1bg0FbrU1WlIWYwUWYtMVdhnCHwvRCJ.BHf.hHyQWczQWYx8kbkMWXsAGak80b441XhnCHwvRCJ.BHf.hHyQWczQWYx8kbkMWXsAGak8Eck0FbuIhNfXCKMn.Hf.BHhLGc0QGckI2Wy8lYz4VYyMmH5.BLtHCLv.CLv.CLv.CLv.CLv.SLwDCKMn.Hf.BHhLGc0QGckI2WykmaiIhNfDCKMn.Hf.BHhLGc0QGckI2WzUVav8lH5.BNrzfBf.BHfHxb0I1WuMFcgYWYhnCHvvRCJ.BHf.hHyUmXeMGZ0YlYrUlH5.BLrzfBf.BHfHxb0I1W18Fa00VYhnCHvvRCJ.BHf.hHyUmXecWX1UlYuIWahnCHxvRCJ.BHf.hH04VZy8laeEyWnElbs8laooWYhnCHvvRCJ.BHf.hH04VZy8laeIyWnElbs8laooWYhnCHvvRCJ.BHf.hH1UFauMVZzk2WzIWXislH5.BLrzfBf.BHfHhcuwVcsUlH5.BLtfSLzfyLyjSL4DyL3biLxXCL1TSNrzfBf.BHfHRauQVcrEFco8layIhNfrUWMn.HfzWCJzG.XUkazkFcrUFY.f..Y.fI.rB.3..P.fD.MAvW.PF.oQPzDPMAVSP1DrMAhSv4DjNAtSg0........BD..........U...................T7M</STATE>
+    <LAYOUT>
+      <INPUTS/>
+      <OUTPUTS>
+        <BUS index="0" layout="C"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="6" x="0.5075" y="0.3346153846153846">
+    <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
+            numOutputs="2" isShell="0" uid="246006c0"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="disabled"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="C"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="9" x="0.39375" y="0.8615384615384616">
+    <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="1"
+            numOutputs="0" isShell="0" uid="724248cb"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="disabled"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="10" x="0.39375" y="0.6115384615384616">
+    <PLUGIN name="Brainium Audio Programming Pt. 2" format="AudioUnit" category="Effect"
+            manufacturer="Spenser Saling" version="1.0.0" file="AudioUnit:Effects/aufx,Tl6l,Manu"
+            uniqueId="78783e61" isInstrument="0" fileTime="0" infoUpdateTime="17cf336c6f7"
+            numInputs="1" numOutputs="1" isShell="0" uid="78783e61"/>
+    <STATE>191.hAGaoMGcv.y0AHv.DTfAGfPBJHwDTTAWsEla0YVXiQWcxUlbTQVXzEFWkwVYsUlaz0hag0VYWMWchQWdvU1U1Ulbyk1atQEc4AWYT4VXsUlDMEla0AjzKvPCPDULQISzN7PTvTURtAWczEsCQX0S0QGb0QmDTwlMrAA.RDVclgGVU4FcoQGakQFBWPRJ13iQKAUUVsUWeIFYp0Fc4sGf........AD..........V....................jH</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="C"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="C"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="5" dstChannel="4096"/>
+  <CONNECTION srcFilter="5" srcChannel="0" dstFilter="10" dstChannel="0"/>
+  <CONNECTION srcFilter="10" srcChannel="0" dstFilter="9" dstChannel="0"/>
+  <CONNECTION srcFilter="10" srcChannel="0" dstFilter="9" dstChannel="1"/>
+</FILTERGRAPH>

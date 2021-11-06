@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="TL6LlA" name="Brainium Audio Programming Pt. 2" projectType="audioplug"
+              useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
+              jucerFormatVersion="1" companyName="Spenser Saling" cppLanguageStandard="17">
+  <MAINGROUP id="F2roNH" name="Brainium Audio Programming Pt. 2">
+    <GROUP id="{52FD1F79-6640-8063-AB63-CC4861D3F1FD}" name="Util">
+      <FILE id="sHjCQQ" name="RecircBuffer.h" compile="0" resource="0" file="Source/RecircBuffer.h"/>
+      <FILE id="s0bbSv" name="RollingAverage.h" compile="0" resource="0"
+            file="Source/RollingAverage.h"/>
+    </GROUP>
+    <GROUP id="{1B190A05-4955-CA07-D6B8-72FA9F2054E3}" name="Processing">
+      <FILE id="lGJ0Jv" name="Chain.h" compile="0" resource="0" file="Source/Chain.h"/>
+      <FILE id="aJD4PS" name="Compressor.h" compile="0" resource="0" file="Source/Compressor.h"/>
+      <FILE id="uGlBQ1" name="Delay.h" compile="0" resource="0" file="Source/Delay.h"/>
+      <FILE id="rxqID3" name="Generator.h" compile="0" resource="0" file="Source/Generator.h"/>
+      <FILE id="LghAe4" name="Level.h" compile="0" resource="0" file="Source/Level.h"/>
+      <FILE id="CjvrQG" name="LowPass.h" compile="0" resource="0" file="Source/LowPass.h"/>
+      <FILE id="F6HyUz" name="Processor.h" compile="0" resource="0" file="Source/Processor.h"/>
+      <FILE id="wonTNk" name="Saturator.h" compile="0" resource="0" file="Source/Saturator.h"/>
+    </GROUP>
+    <GROUP id="{F8877659-7C0D-CF4F-B76E-1661AA795C04}" name="GUI">
+      <FILE id="N6bz9U" name="CompressorGUI.h" compile="0" resource="0" file="Source/CompressorGUI.h"/>
+      <FILE id="CflraQ" name="DelayGUI.h" compile="0" resource="0" file="Source/DelayGUI.h"/>
+      <FILE id="iQ8yJU" name="GeneratorGUI.h" compile="0" resource="0" file="Source/GeneratorGUI.h"/>
+      <FILE id="DrFuS0" name="GuiSection.h" compile="0" resource="0" file="Source/GuiSection.h"/>
+      <FILE id="lCdaTl" name="LevelGUI.h" compile="0" resource="0" file="Source/LevelGUI.h"/>
+      <FILE id="Pi8Cl1" name="LowPassGUI.h" compile="0" resource="0" file="Source/LowPassGUI.h"/>
+      <FILE id="N59Jcn" name="SaturatorGUI.h" compile="0" resource="0" file="Source/SaturatorGUI.h"/>
+      <FILE id="zaDlgJ" name="test.h" compile="0" resource="0" file="Source/test.h"/>
+      <FILE id="JJHM5x" name="Visualizer.h" compile="0" resource="0" file="Source/Visualizer.h"/>
+    </GROUP>
+    <GROUP id="{8B2A4760-081F-2E0F-A3DB-AFE7B5D746B4}" name="Source">
+      <FILE id="EEWaqK" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="fgwLeN" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="P87DSJ" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="Ub4jy0" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="NewProject"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
