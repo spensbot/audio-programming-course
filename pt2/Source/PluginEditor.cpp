@@ -72,5 +72,5 @@ void NewProjectAudioProcessorEditor::resized()
     
     _visualizer.setBounds(bounds);
     _windowSeconds.setBounds(bounds.removeFromBottom(30));
-    _generatorGUI.setBounds(bounds.removeFromRight(width * 0.2));
+    _generatorGUI.setBounds(bounds.removeFromRight(width * 0.15));
 }

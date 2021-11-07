@@ -11,20 +11,24 @@
 #pragma once
 
 #include "LowPass.h"
+#include "LabelledSlider.h"
 
 class LowPassGUI : public juce::Component
 {
 public:
     LowPassGUI(LowPass::State& state, std::function<void()> onChange): _state(state) {
-        addAndMakeVisible(&_label);
         addAndMakeVisible(&_slider);
-        _slider.setRange(20.f, 20000.f);
-        _slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
-        _slider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::TextBoxBelow, false, 100, 20);
-        _slider.onValueChange = [this, onChange]{ _state.frequency = _slider.getValue(); onChange(); };
-        _slider.setValue(20000.f);
-        _slider.setSkewFactorFromMidPoint(500.f);
-        _slider.setTextValueSuffix("Hz");
+        
+        LabelledSlider::Options o{};
+        o.min = 20.f;
+        o.max = 20000.f;
+        o.onChange = [this, onChange] (float val) { _state.frequency = val; onChange(); };
+        o.init = 20000.f;
+        o.skewMidpoint = 500.f;
+//        o.label = "";
+        o.suffix = "Hz";
+        
+        _slider.setup(o);
     }
 
     void resized() override
@@ -35,8 +39,7 @@ public:
 
 private:
     LowPass::State& _state;
-    juce::Label _label;
-    juce::Slider _slider;
+    LabelledSlider _slider;
    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LowPassGUI)
 };

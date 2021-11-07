@@ -45,6 +45,7 @@ private:
     GuiSection<CompressorGUI> _compressorGUI;
     GeneratorGUI _generatorGUI;
     juce::Slider _windowSeconds;
+    juce::TextButton _toggleStuff;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessorEditor)
 };

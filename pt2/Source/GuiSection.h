@@ -24,11 +24,6 @@ public:
         addAndMakeVisible(_contents.get());
     }
 
-    ~GuiSection() override
-    {
-        
-    }
-
     void paint (juce::Graphics& g) override
     {
         g.fillAll (juce::Colours::grey);   // clear the background

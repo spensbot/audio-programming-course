@@ -20,6 +20,7 @@ public:
      0 takes the current sample as the average.
      */
     void setSustainSamples(float sustainSamples){
+        if (sustainSamples < 1.f) sustainSamples = 1.f;
         newWeight = 1.0f / sustainSamples;
         oldWeight = 1.0f - newWeight;
     }

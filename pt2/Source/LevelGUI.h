@@ -11,19 +11,19 @@
 #pragma once
 
 #include "Level.h"
+#include "LabelledSlider.h"
 
 class LevelGUI : public juce::Component
 {
 public:
     LevelGUI(Level::State& state, std::function<void()> onChange): _state(state) {
         addAndMakeVisible(&_slider);
-        _slider.setRange(0.f, 1.f);
-        _slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
-        _slider.onValueChange = [this, onChange]{
-            _state.level = _slider.getValue();
-            onChange();
-        };
-        _slider.setValue(1.0f);
+        
+        LabelledSlider::Options o{};
+        o.onChange = [this, onChange] (float val) { _state.level = val; onChange(); };
+        o.init = 1.f;
+        
+        _slider.setup(o);
     }
 
     void resized() override
@@ -33,7 +33,7 @@ public:
     }
 
 private:
-    juce::Slider _slider;
+    LabelledSlider _slider;
     Level::State& _state;
    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LevelGUI)

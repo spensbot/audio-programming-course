@@ -96,6 +96,7 @@ void NewProjectAudioProcessor::changeProgramName (int index, const juce::String&
 //==============================================================================
 void NewProjectAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    _generator.prepare(sampleRate);
     _chain.prepare(sampleRate);
 }
 

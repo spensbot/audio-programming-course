@@ -18,12 +18,14 @@ class Visualizer : public juce::Component
 public:
     Visualizer(float& generator_t, Generator::State& generatorState, Chain::State& chainState)
         : _generator_t(generator_t)
-        , _generator(generatorState, _localGenerator_t) {
+        , _generator(generatorState, _localGenerator_t)
+        , _compressor(chainState.compressorState)
+    {
         _processors.push_back(std::make_unique<Level>(chainState.levelState));
         _processors.push_back(std::make_unique<Saturator>(chainState.saturatorState));
         _processors.push_back(std::make_unique<Delay>(chainState.delayState));
         _processors.push_back(std::make_unique<LowPass>(chainState.lowPassState));
-        _processors.push_back(std::make_unique<Compressor>(chainState.compressorState));
+//        _processors.push_back(std::make_unique<Compressor>(chainState.compressorState));
     }
     
     void updateWindow(float windowSeconds) { _windowSeconds = windowSeconds; update(); }
@@ -39,8 +41,8 @@ public:
         g.drawLine(x, y_, getWidth(), y_, LINE_THICKNESS);
 
         for (int i=0 ; i<_samples.size()-1 ; ++i) {
-            const auto [generatedSample0, processedSample0] = _samples[i];
-            const auto [generatedSample1, processedSample1] = _samples[i+1];
+            const auto [generatedSample0, processedSample0, compAvg0, compCorrection0] = _samples[i];
+            const auto [generatedSample1, processedSample1, compAvg1, compCorrection1] = _samples[i+1];
             
             g.setColour (juce::Colour::fromHSV(0.0f,1.0f,1.0f,1.0f));
             auto x0 = x;
@@ -52,6 +54,16 @@ public:
             g.setColour (juce::Colour::fromHSV(0.5f,1.0f,1.0f,1.0f));
             y0 = y_ - processedSample0 * amplitude;
             y1 = y_ - processedSample1 * amplitude;
+            g.drawLine(x0, y0, x1, y1, LINE_THICKNESS);
+            
+            g.setColour (juce::Colour::fromHSV(0.75f,1.0f,1.0f,1.0f));
+            y0 = y_ - compAvg0 * amplitude;
+            y1 = y_ - compAvg1 * amplitude;
+            g.drawLine(x0, y0, x1, y1, LINE_THICKNESS);
+            
+            g.setColour (juce::Colour::fromHSV(0.25f,1.0f,1.0f,1.0f));
+            y0 = y_ - compCorrection0 * amplitude;
+            y1 = y_ - compCorrection1 * amplitude;
             g.drawLine(x0, y0, x1, y1, LINE_THICKNESS);
             
             x = x1;
@@ -73,14 +85,17 @@ public:
         for (auto& processor : _processors) {
             processor->prepare(sampleRate);
         }
+        _compressor.prepare(sampleRate);
 
-        for (auto& [generatedSample, processedSample] : _samples) {
+        for (auto& [generatedSample, processedSample, compAvg, compCorrection] : _samples) {
             generatedSample = _generator.getNextSample();
             processedSample = generatedSample;
             for (auto& processor : _processors) {
                 processedSample = processor->processSample(processedSample);
             }
-            std::cout << processedSample << std::endl;
+            processedSample = _compressor.processSample(processedSample);
+            compAvg = _compressor.getAvg();
+            compCorrection = _compressor.getCorrection();
         }
 
         repaint();
@@ -94,8 +109,9 @@ private:
     float _localGenerator_t;
     Generator _generator;
     std::vector<std::unique_ptr<Processor>> _processors;
+    Compressor _compressor;
             
-    std::vector<std::tuple<float, float>> _samples;
+    std::vector<std::tuple<float, float, float, float>> _samples;
                                                      
     float _windowSeconds = 1.f;
  
