@@ -29,6 +29,7 @@ public:
         float min = 0.f;
         float max = 1.f;
         float init = 0.f;
+        bool horizontal = false;
     };
     
     LabelledSlider() = default;
@@ -36,7 +37,7 @@ public:
     void setup(Options options) {
         addAndMakeVisible(_slider);
         _slider.setRange(options.min, options.max);
-        _slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
+        if (!options.horizontal) _slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
         if (options.skewMidpoint) _slider.setSkewFactorFromMidPoint(*options.skewMidpoint);
         if (options.suffix) _slider.setTextValueSuffix(*options.suffix);
         _slider.onValueChange = [this, options]{ options.onChange(_slider.getValue()); };

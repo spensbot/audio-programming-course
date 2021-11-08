@@ -12,6 +12,7 @@
 
 #include "Chain.h"
 #include "Generator.h"
+#include "VisualizerTiming.h"
 
 class Visualizer : public juce::Component
 {
@@ -26,9 +27,14 @@ public:
         _processors.push_back(std::make_unique<Delay>(chainState.delayState));
         _processors.push_back(std::make_unique<LowPass>(chainState.lowPassState));
 //        _processors.push_back(std::make_unique<Compressor>(chainState.compressorState));
+        addAndMakeVisible(&_timing);
     }
     
-    void updateWindow(float windowSeconds) { _windowSeconds = windowSeconds; update(); }
+    void updateWindow(float windowSeconds) {
+        _windowSeconds = windowSeconds;
+        update();
+        _timing.reset(windowSeconds);
+    }
 
     void paint (juce::Graphics& g) override
     {
@@ -72,6 +78,8 @@ public:
 
     void resized() override
     {
+        _timing.setBounds(getLocalBounds());
+        
         update();
     }
     
@@ -110,6 +118,7 @@ private:
     Generator _generator;
     std::vector<std::unique_ptr<Processor>> _processors;
     Compressor _compressor;
+    VisualizerTiming _timing;
             
     std::vector<std::tuple<float, float, float, float>> _samples;
                                                      

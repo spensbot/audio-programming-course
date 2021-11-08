@@ -18,44 +18,50 @@
 class VisualizerTiming  : public juce::Component
 {
 public:
-    VisualizerTiming()
-    {
-        // In your constructor, you should add any child components, and
-        // initialise any special settings that your component needs.
-
-    }
-
-    ~VisualizerTiming() override
-    {
+    VisualizerTiming() {}
+    
+    void reset(float windowSeconds) {
+        _windowSeconds = windowSeconds;
+        repaint();
     }
 
     void paint (juce::Graphics& g) override
     {
-        /* This demo code just fills the component's background and
-           draws some placeholder text to get you started.
-
-           You should replace everything in this method with your own
-           drawing code..
-        */
-
-        g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
-
-        g.setColour (juce::Colours::grey);
-        g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
+        auto delta = 1.f;
+        
+        while (_windowSeconds / delta < 1.5f) {
+            delta = delta / 5.f;
+        }
+        
+        std::vector<float> lines;
+        
+        auto t = delta;
+        while (t < _windowSeconds) {
+            lines.push_back(t);
+            t += delta;
+        }
+        
+        auto xMin = 0.0;
+        const auto xMax = getWidth();
+        const auto yMin = 0.0;
+        const auto y_ = double (getHeight() / 2);
+        const auto yMax = getHeight();
 
         g.setColour (juce::Colours::white);
         g.setFont (14.0f);
-        g.drawText ("VisualizerTiming", getLocalBounds(),
-                    juce::Justification::centred, true);   // draw some placeholder text
-    }
-
-    void resized() override
-    {
-        // This method is where you should set the bounds of any child
-        // components that your component contains..
-
+        
+        for (const auto line : lines) {
+            const auto x = line / _windowSeconds * xMax;
+            g.drawLine (x, yMin, x, yMax, LINE_THICKNESS);
+            const auto string = juce::String::toDecimalStringWithSignificantFigures(line, 1) + "s";
+            g.drawText (string, juce::Rectangle<float>(x, y_, 60, 30), juce::Justification::left, true);
+        }
     }
 
 private:
+    float _windowSeconds;
+    
+    const double LINE_THICKNESS = 1.0; // pixels
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VisualizerTiming)
 };
