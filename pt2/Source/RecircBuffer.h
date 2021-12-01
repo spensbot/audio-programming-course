@@ -19,6 +19,10 @@ public:
         std::fill(_buffer.begin(), _buffer.end(), 0.f);
     }
     
+    void prepare(double sampleRate, float seconds) {
+        
+    }
+    
     void setSize(int size) {
         _buffer.resize(size);
     }
@@ -30,14 +34,26 @@ public:
         return sampleOut;
     }
     
-private:
-    void increment(){
-        index += 1;
-        index %= _buffer.size();
+    float getSampleBySeconds(float delaySeconds) {
+        
+    }
+    
+    float getAvgAbs(int delaySamplesStart, int numSamples) {
+        auto sum = 0.f;
+        for (auto i=0 ; i<numSamples ; i++) {
+            sum += std::abs(getSample(delaySamplesStart + i));
+        }
+        return sum / numSamples;
     }
     
     void push(float sample){
         _buffer[index] = sample;
+    }
+    
+private:
+    void increment(){
+        index += 1;
+        index %= _buffer.size();
     }
     
     float getSample(int delaySamples){

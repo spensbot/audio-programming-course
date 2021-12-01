@@ -15,9 +15,21 @@
 
 #include "Slider.h"
 
-//==============================================================================
-/*
-*/
+/* Usage
+ 
+Options o;
+o.onChange =
+o.skewMidpoint =
+o.label =
+o.suffix =
+o.min =
+o.max =
+o.init =
+o.horizontal =
+slider.setup(o);
+ 
+ */
+
 class LabelledSlider  : public juce::Component
 {
 public:
@@ -26,6 +38,7 @@ public:
         std::optional<float> skewMidpoint;
         std::optional<juce::String> label;
         std::optional<juce::String> suffix;
+        juce::Slider::TextEntryBoxPosition textBox = juce::Slider::TextEntryBoxPosition::TextBoxBelow;
         float min = 0.f;
         float max = 1.f;
         float init = 0.f;
@@ -42,7 +55,7 @@ public:
         if (options.suffix) _slider.setTextValueSuffix(*options.suffix);
         _slider.onValueChange = [this, options]{ options.onChange(_slider.getValue()); };
         _slider.setValue(options.init);
-        _slider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::TextBoxBelow, false, 100, 20);
+        _slider.setTextBoxStyle(options.textBox, false, 100, 20);
         
         if (options.label) {
             _label.emplace();

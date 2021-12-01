@@ -19,8 +19,8 @@ public:
     struct State {
         float threshold = 1.f;
         float ratio = 1.f;
-        float attack = 1.f;
-        float release = 1.f;
+        float attack = 0.f;
+        float release = 0.f;
     };
     
     Compressor(State& state): _state(state) {}
@@ -70,6 +70,10 @@ public:
 //                return -_state.threshold + dif / _state.ratio;
 //            }
 //        }
+    }
+    
+    float getThreshold() {
+        return _state.threshold;
     }
     
 private:

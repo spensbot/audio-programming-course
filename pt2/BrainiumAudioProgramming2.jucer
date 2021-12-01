@@ -27,14 +27,22 @@
       <FILE id="EoVKJQ" name="LabelledSlider.h" compile="0" resource="0"
             file="Source/LabelledSlider.h"/>
       <FILE id="lCdaTl" name="LevelGUI.h" compile="0" resource="0" file="Source/LevelGUI.h"/>
-      <FILE id="urBdLy" name="LiveVisualizer.h" compile="0" resource="0"
-            file="Source/LiveVisualizer.h"/>
       <FILE id="Pi8Cl1" name="LowPassGUI.h" compile="0" resource="0" file="Source/LowPassGUI.h"/>
       <FILE id="N59Jcn" name="SaturatorGUI.h" compile="0" resource="0" file="Source/SaturatorGUI.h"/>
       <FILE id="GNmJr6" name="Slider.h" compile="0" resource="0" file="Source/Slider.h"/>
       <FILE id="JmZ7Uw" name="TransferFunctionVisualizer.h" compile="0" resource="0"
             file="Source/TransferFunctionVisualizer.h"/>
       <FILE id="JJHM5x" name="Visualizer.h" compile="0" resource="0" file="Source/Visualizer.h"/>
+      <FILE id="nM10gt" name="VisualizerCursor.h" compile="0" resource="0"
+            file="Source/VisualizerCursor.h"/>
+      <FILE id="TBRCOh" name="VisualizerGenerated.h" compile="0" resource="0"
+            file="Source/VisualizerGenerated.h"/>
+      <FILE id="dl1w1v" name="VisualizerLive.h" compile="0" resource="0"
+            file="Source/VisualizerLive.h"/>
+      <FILE id="XEPWUp" name="VisualizerSelect.h" compile="0" resource="0"
+            file="Source/VisualizerSelect.h"/>
+      <FILE id="uZobBu" name="VisualizerState.h" compile="0" resource="0"
+            file="Source/VisualizerState.h"/>
       <FILE id="X02j0Y" name="VisualizerTiming.h" compile="0" resource="0"
             file="Source/VisualizerTiming.h"/>
     </GROUP>
@@ -86,4 +94,7 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>

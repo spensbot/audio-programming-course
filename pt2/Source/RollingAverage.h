@@ -20,9 +20,13 @@ public:
      0 takes the current sample as the average.
      */
     void setSustainSamples(float sustainSamples){
-        if (sustainSamples < 1.f) sustainSamples = 1.f;
-        newWeight = 1.0f / sustainSamples;
-        oldWeight = 1.0f - newWeight;
+        if (sustainSamples < 1.0) {
+            newWeight = 1.0f;
+            oldWeight = 0.0f;
+        } else {
+            newWeight = 1.0f / sustainSamples;
+            oldWeight = 1.0f - newWeight;
+        }
     }
     
     void setSustainSeconds(float sampleRate, float sustainSeconds){
@@ -52,10 +56,20 @@ class RollingAverageBiased {
 
 public:
     void setSustainSamples(float riseSamples, float fallSamples) {
-        weightUpNew = 1.0f/riseSamples;
-        weightUpOld = 1.0f - weightUpNew;
-        weightDownNew = 1.0f/fallSamples;
-        weightDownOld = 1.0f - weightDownNew;
+        if (riseSamples < 1.0) {
+            weightUpNew = 1.0;
+            weightUpOld = 0.0;
+        } else {
+            weightUpNew = 1.0f/riseSamples;
+            weightUpOld = 1.0f - weightUpNew;
+        }
+        if (fallSamples < 1.0) {
+            weightDownNew = 1.0;
+            weightDownOld = 0.0;
+        } else {
+            weightDownNew = 1.0f/fallSamples;
+            weightDownOld = 1.0f - weightDownNew;
+        }
     }
 
     void setSustainSeconds(float sampleRate, float riseSeconds, float fallSeconds){

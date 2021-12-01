@@ -37,15 +37,14 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     NewProjectAudioProcessor& audioProcessor;
-    Visualizer _visualizer;
     GuiSection<LevelGUI> _levelGUI;
     GuiSection<SaturatorGUI> _saturatorGUI;
     GuiSection<DelayGUI> _delayGUI;
     GuiSection<LowPassGUI> _lowPassGUI;
     GuiSection<CompressorGUI> _compressorGUI;
-    GeneratorGUI _generatorGUI;
-    juce::Slider _windowSeconds;
-    juce::TextButton _toggleStuff;
+    Visualizer _visualizer;
+    VisualizerLive _visualizerLive;
+    juce::ToggleButton _isGenerated;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessorEditor)
 };

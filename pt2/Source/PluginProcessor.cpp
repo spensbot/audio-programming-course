@@ -98,6 +98,8 @@ void NewProjectAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
 {
     _generator.prepare(sampleRate);
     _chain.prepare(sampleRate);
+    _inBuffer.setSize(sampleRate * 3.0);
+    _outBuffer.setSize(sampleRate * 3.0);
 }
 
 void NewProjectAudioProcessor::releaseResources()
@@ -149,8 +151,14 @@ void NewProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     auto* monoChannelData = buffer.getWritePointer(0);
     
     for (int i=0 ; i<buffer.getNumSamples() ; i++) {
-        const auto sample = _generator.getNextSample();
-        monoChannelData[i] = _chain.processSample(sample);
+        _inBuffer.push(monoChannelData[i]);
+        if (_generatorState.isGenerated) {
+                const auto sample = _generator.getNextSample();
+                monoChannelData[i] = _chain.processSample(sample);
+        } else {
+                monoChannelData[i] = _chain.processSample(monoChannelData[i]);
+        }
+        _outBuffer.push(monoChannelData[i]);
     }
 }
 

@@ -12,31 +12,28 @@
 
 #include <JuceHeader.h>
 
+#include "VisualizerState.h"
+
 //==============================================================================
 /*
 */
 class VisualizerTiming  : public juce::Component
 {
 public:
-    VisualizerTiming() {}
-    
-    void reset(float windowSeconds) {
-        _windowSeconds = windowSeconds;
-        repaint();
-    }
+    VisualizerTiming(VisualizerState& state): _state(state) {}
 
     void paint (juce::Graphics& g) override
     {
         auto delta = 1.f;
         
-        while (_windowSeconds / delta < 1.5f) {
-            delta = delta / 5.f;
+        while (_state.windowSeconds / delta < 1.5f) {
+            delta = delta / 2.f;
         }
         
         std::vector<float> lines;
         
         auto t = delta;
-        while (t < _windowSeconds) {
+        while (t < _state.windowSeconds) {
             lines.push_back(t);
             t += delta;
         }
@@ -51,15 +48,15 @@ public:
         g.setFont (14.0f);
         
         for (const auto line : lines) {
-            const auto x = line / _windowSeconds * xMax;
+            const auto x = line / _state.windowSeconds * xMax;
             g.drawLine (x, yMin, x, yMax, LINE_THICKNESS);
-            const auto string = juce::String::toDecimalStringWithSignificantFigures(line, 1) + "s";
+            const auto string = juce::String::toDecimalStringWithSignificantFigures(line, 2) + "s";
             g.drawText (string, juce::Rectangle<float>(x, y_, 60, 30), juce::Justification::left, true);
         }
     }
 
 private:
-    float _windowSeconds;
+    VisualizerState& _state;
     
     const double LINE_THICKNESS = 1.0; // pixels
     

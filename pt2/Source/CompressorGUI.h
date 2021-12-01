@@ -36,9 +36,9 @@ public:
         addAndMakeVisible(_attack);
         o = {};
         o.onChange = [this, onChange] (float val) { _state.attack = val; onChange(); };
-        o.min = 1.f;
+        o.min = 0.f;
         o.max = 100.f;
-        o.init = 1.f;
+        o.init = 0.f;
         o.label = "Attack";
         o.suffix = "ms";
         _attack.setup(o);
@@ -46,9 +46,9 @@ public:
         addAndMakeVisible(_release);
         o = {};
         o.onChange = [this, onChange] (float val) { _state.release = val; onChange(); };
-        o.min = 1.f;
+        o.min = 0.f;
         o.max = 500.f;
-        o.init = 1.f;
+        o.init = 0.f;
         o.label = "Release";
         o.suffix = "ms";
         _release.setup(o);

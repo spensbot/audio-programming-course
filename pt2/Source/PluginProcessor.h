@@ -60,7 +60,10 @@ public:
 
     Chain::State _chainState;
     Generator::State _generatorState;
-    float _generator_t;
+    float _generator_t = 100.0;
+    
+    RecircBuffer _inBuffer, _outBuffer;
+    
 private:
     Chain _chain;
     Generator _generator;

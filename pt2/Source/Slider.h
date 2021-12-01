@@ -22,7 +22,7 @@ public:
     
     juce::String getTextFromValue (double value) override
     {
-        return juce::String::toDecimalStringWithSignificantFigures(value, 3);
+        return juce::String::toDecimalStringWithSignificantFigures(value, 3) + getTextValueSuffix();
     }
 
 private:

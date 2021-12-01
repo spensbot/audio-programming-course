@@ -17,9 +17,9 @@ class Delay : public Processor {
 public:
     struct State {
         float delaySeconds = 0.0; // 0 to 1
-        float feedback; // 0 to 1
-        float dryMix; // 0 to 1
-        float wetMix; // 0 to 1
+        float feedback = 0.0; // 0 to 1
+        float dryMix = 1.0; // 0 to 1
+        float wetMix = 0.0; // 0 to 1
     };
     
     Delay(State& state): _state(state) {}
@@ -39,6 +39,6 @@ public:
 private:
     State& _state;
     RecircBuffer _buffer;
-    double _sampleRate;
+    double _sampleRate = 44000.0;
 };
 
